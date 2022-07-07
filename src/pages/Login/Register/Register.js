@@ -1,37 +1,64 @@
-import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import './Register.css'
+
+
 
 const Register = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    const [agree, setAgree] = useState(false);
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+
+    if (user) {
+        console.log(user)
+    }
+
+
+    const handleRegister = async (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        alert('Updated profile');
+        navigate('/home')
+
+
+    }
+
     return (
-        <div>
-            <h2 className='text-center'>Please Register!!!</h2>
-            <Form className='container w-50 mx-auto'>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="text" placeholder="Enter name" />
-                </Form.Group>
+        <div className='register-form'>
+            <h1 className='text-center'>Please Register</h1>
+            <form onSubmit={handleRegister} >
+                <input type="text" name="name" id="" placeholder='enter your name' required />
+                <input type="email" name="email" id="" placeholder='enter your email' required />
+                <input type="password" name="password" id="" placeholder='password' required />
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
+                <p>Already have an account? <Link to='/login' className='text-danger text-decoration-none'>Please login</Link></p>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <p>Already have an account? <Link to='/signup'>Please LogIn</Link></p>
-
-
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-
-                <Button
-                    className='mb-3 w-50 mx-auto d-block'
-                    variant="primary"
-                    type="submit">
-                    Login
-                </Button>
-            </Form>
+                <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Term and Condition</label>
+                <input
+                    disabled={!agree}
+                    className='btn btn-primary d-block w-50 mx-auto mb-3'
+                    type="submit"
+                    value="Register" />
+            </form>
         </div>
     );
 };
