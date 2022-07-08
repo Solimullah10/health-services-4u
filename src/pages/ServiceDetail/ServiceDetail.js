@@ -1,13 +1,14 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-const ServiceDetail = (props) => {
-    console.log(props?.id);
+const ServiceDetail = () => {
     const { serviceId } = useParams();
     return (
-        <div>
+        <div className='text-center'>
             <h2>Welcome to service details-{serviceId}</h2>
-
+            <Link to='/checkout'>
+                <button className='btn btn-primary '>Booking Service</button>
+            </Link>
         </div>
     );
 };
