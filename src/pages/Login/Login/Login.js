@@ -64,7 +64,7 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
                 </Form.Group>
                 <Button className='btn btn-primary d-block w-25 mx-auto mb-3' variant="primary" type="submit">
-                    <img src={googleIcon} alt="" />
+                    <img className='me-2' src={googleIcon} alt="" />
                     <span>Login</span>
                 </Button>
             </Form>
