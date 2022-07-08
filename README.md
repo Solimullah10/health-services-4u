@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Health Service for you
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About my projects
+<ul>
+    <li>This service for all people</li>
+    <li>Outdoor medical treatment with specialized doctors and consultants
+</li>
+    <li>Indoor Patient (IPD) management</li>
+    <li>Outdoor Patient (OPD) management</li>
+</ul>
 
-In the project directory, you can run:
 
 ### `npm start`
 
