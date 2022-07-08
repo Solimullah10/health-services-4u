@@ -1,20 +1,38 @@
 [
     {
         "id": 1,
-        "title": "ENGINE DIAGNOSTIC",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "title": "Discus to Patient",
+        "description": "Acute traumatic spinal cord injury is a devastating condition that causes permanent disability (paralysis, numbness) and other complications such as chest and urine infections, pressure ulcers and loss of bladder and bowel control..",
         "img": "https://i.ibb.co/1JL7X5K/s1.jpg"
     },
     {
         "id": 2,
-        "title": "ENGINE DIAGNOSTIC",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "title": "Medicine Instruction",
+        "description": "Medicines help us live longer and healthier. But, taking them the wrong way or mixing certain drugs can be dangerous. You need to be careful to keep track of your medicines and use them safely.",
         "img": "https://i.ibb.co/K6q0kDY/s2.jpg"
     },
     {
         "id": 3,
-        "title": "ENGINE DIAGNOSTIC",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "title": "BP Measurement",
+        "description": "Ask The Experts At Free Croí Webinar: Managing High Blood Pressure. Join Us for Free and Get Support Every Day. Preventing Heart Disease. Saving Lives. Promoting Wellbeing.",
         "img": "https://i.ibb.co/4sG0JKN/s3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Take care Patient",
+        "description": "THERE IS A SIGNIFICANT difference between taking care of patients and caring for patients. TAKING CARE OF PATIENTS emphasizes objective, professional care, such as the medical and psychological aspects of nursing.",
+        "img": " https://i.ibb.co/db1LFJz/s4.png"
+    },
+    {
+        "id": 5,
+        "title": "Successful",
+        "description": "A successful doctor makes an commitment to life-long learning. They strive for excellence by constantly improving their skills and knowledge.",
+        "img": "https://i.ibb.co/58CT1t4/s5.png"
+    },
+    {
+        "id": 6,
+        "title": "Online services",
+        "description": "We Offer Seamless Services From The Greetings at the Airport To Registration and Discharge. We Provide Complete Assistance from Travel to Surgery.",
+        "img": "https://i.ibb.co/sbNyzPg/s6.png"
     }
 ]

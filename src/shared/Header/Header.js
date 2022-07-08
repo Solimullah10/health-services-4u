@@ -11,7 +11,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
 
 
-    const logout = () => {
+    const logOut = () => {
         signOut(auth);
         navigate('/home')
     };
@@ -29,7 +29,7 @@ const Header = () => {
                     </Nav>
                     <Nav>{
                         user ?
-                            <Nav.Link onClick={logout} className='text-uppercase btn btn-warning text-dark' href="home">Sign Out</Nav.Link>
+                            <Nav.Link onClick={logOut} className='text-uppercase btn btn-warning text-dark' href="home">Sign Out</Nav.Link>
                             :
                             <Nav.Link className='text-uppercase text-white' href="login">Sign UP</Nav.Link>
                     }

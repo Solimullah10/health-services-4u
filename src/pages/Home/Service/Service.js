@@ -15,7 +15,7 @@ const Service = ({ service }) => {
             <Card className='row'>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>Service Name: {title}</Card.Title>
+                    <Card.Title className='text-uppercase'>{title}</Card.Title>
                     <Card.Text>
                         {description}
                     </Card.Text>

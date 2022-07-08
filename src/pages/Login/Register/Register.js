@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import './Register.css'
+import { toast } from 'react-toastify';
 
 
 
@@ -35,7 +35,7 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        alert('Updated profile');
+        toast('Updated profile');
         navigate('/home')
 
 

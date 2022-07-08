@@ -7,7 +7,7 @@ import Loading from '../../../shared/Loading/Loading';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import googleIcon from '../../../images/logo/google.png'
+
 
 
 const Login = () => {
@@ -64,7 +64,6 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" required placeholder="Password" />
                 </Form.Group>
                 <Button className='btn btn-primary d-block w-25 mx-auto mb-3' variant="primary" type="submit">
-                    <img className='me-2' src={googleIcon} alt="" />
                     <span>Login</span>
                 </Button>
             </Form>
