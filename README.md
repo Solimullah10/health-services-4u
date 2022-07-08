@@ -10,6 +10,7 @@ This project was Firebase Hosting Link [Create React App](https://health-service
 </li>
     <li>Indoor Patient (IPD) management</li>
     <li>Outdoor Patient (OPD) management</li>
+    <li>Well Management</li>
 </ul>
 
 
